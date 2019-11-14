@@ -46,9 +46,9 @@
 					<div class="uk-width-1-2">
 					    <div class="uk-card uk-card-default uk-card-body uk-text-center">
 					    	<h3 class="uk-card-title">
-					    		Akademik
+					    		Fasilitas
 					    	</h3>
-					    	<button class="uk-button uk-button-default">
+					    	<button onclick="change('sec_1', 'fasilitas')" class="uk-button uk-button-default">
 					    		Lapor
 					    	</button>
 					    </div>
@@ -215,7 +215,7 @@
 			    	<h3 class="uk-card-title">
 			    		Kerusakan Fasilitas
 			    	</h3>
-			    	<button onclick="change('akademik', 'kinerja_dosen')" class="uk-button uk-button-default">
+			    	<button onclick="change('fasilitas', 'kerusakan')" class="uk-button uk-button-default">
 			    		Lapor
 			    	</button>
 			    </div>
@@ -227,6 +227,70 @@
 			    		Lapor
 			    	</button>
 			    </div>
+			</div>
+
+			<div class="uk-container uk-margin-top uk-margin-large-bottom container" id="kerusakan">
+				<button onclick="change('kerusakan', 'fasilitas')" class="uk-button uk-button-primary"><span uk-icon="icon: chevron-double-left"></span> Back</button>
+
+				<span class="uk-float-right uk-margin-small-top">Pengaduan kerusakan</span>
+
+				<div class="uk-card uk-card-default uk-margin-top">
+					<div class="uk-card-body">
+						<fieldset class="uk-fieldset" id="kerusakan_satu">
+							 <legend class="uk-legend">Data Mahasiswa</legend>
+							<div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Nama anda">
+					        </div>
+					        <div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="NIM anda">
+					        </div>
+					        <div class="uk-margin">
+					            <select class="uk-select">
+					                <option selected disabled>Pilih Jurusan Anda</option>
+					                <option>Teknik Informatika</option>
+					                <option>Sistem Informasi</option>
+					                <option>Sistem Komputer</option>
+					            </select>
+					        </div>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('kerusakan_satu', 'kerusakan_dua')" class="uk-button uk-button-primary uk-float-right">
+					        		Selanjutnya
+					        	</button>
+					        </div>
+				        </fieldset>
+
+				        <fieldset class="uk-fieldset container" id="kerusakan_dua">
+							<legend class="uk-legend">Laporan Kamu</legend>
+							<div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Subjek Aspirasi">
+					        </div>
+					        <div class="uk-margin">
+					            <textarea class="uk-textarea" rows="5" placeholder="Isi Aspirasi"></textarea>
+					        </div>
+							
+							<div class="js-upload uk-placeholder uk-margin uk-text-center">
+								<span uk-icon="icon: cloud-upload"></span>
+								<span class="uk-text-middle">Foto Kerusakan, seret ke sini atau</span>
+								<div uk-form-custom>
+									<input type="file" multiple>
+									<span class="uk-link">jelajahi berkas</span>
+								</div>
+							</div>
+
+							<progress id="js-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('kerusakan_dua', 'kerusakan_satu')" class="uk-button uk-button-default">
+					        		Sebelumnya
+					        	</button>
+					        	<button type="submit" class="uk-button uk-button-primary uk-float-right">
+					        		Kirim Aspirasi
+					        	</button>
+					        </div>
+				        </fieldset>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
