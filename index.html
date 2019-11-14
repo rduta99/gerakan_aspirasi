@@ -56,9 +56,9 @@
 					<div class="uk-width-1-2">
 					    <div class="uk-card uk-card-default uk-card-body uk-text-center">
 					    	<h3 class="uk-card-title">
-					    		Akademik
+					    		Kritik & Saran
 					    	</h3>
-					    	<button class="uk-button uk-button-default">
+					    	<button onclick="change('sec_1', 'kritik_saran')" class="uk-button uk-button-default">
 					    		Lapor
 					    	</button>
 					    </div>
@@ -219,14 +219,6 @@
 			    		Lapor
 			    	</button>
 			    </div>
-			    <div class="uk-card uk-card-default uk-card-body uk-text-center">
-			    	<h3 class="uk-card-title">
-			    		Pengajuan Fasilitas
-			    	</h3>
-			    	<button onclick="change('akademik', 'seminar')" class="uk-button uk-button-default">
-			    		Lapor
-			    	</button>
-			    </div>
 			</div>
 
 			<div class="uk-container uk-margin-top uk-margin-large-bottom container" id="kerusakan">
@@ -282,6 +274,65 @@
 
 					        <div class="uk-margin-top">
 					        	<button onclick="change('kerusakan_dua', 'kerusakan_satu')" class="uk-button uk-button-default">
+					        		Sebelumnya
+					        	</button>
+					        	<button type="submit" class="uk-button uk-button-primary uk-float-right">
+					        		Kirim Aspirasi
+					        	</button>
+					        </div>
+				        </fieldset>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-container uk-margin-top container" id="kritik_saran">
+				<button onclick="change('kritik_saran', 'sec_1')" class="uk-button uk-button-primary"><span uk-icon="icon: chevron-double-left"></span> Back</button>
+
+				<span class="uk-float-right uk-margin-small-top">Kritik & Saran</span>
+			    <div class="uk-card uk-card-default uk-margin-top">
+					<div class="uk-card-body">
+						<fieldset class="uk-fieldset" id="kritik_satu">
+							 <legend class="uk-legend">Data Mahasiswa</legend>
+							<div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Nama anda">
+					        </div>
+					        <div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="NIM anda">
+					        </div>
+					        <div class="uk-margin">
+					            <select class="uk-select">
+					                <option selected disabled>Pilih Jurusan Anda</option>
+					                <option>Teknik Informatika</option>
+					                <option>Sistem Informasi</option>
+					                <option>Sistem Komputer</option>
+					            </select>
+					        </div>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('kritik_satu', 'kritik_dua')" class="uk-button uk-button-primary uk-float-right">
+					        		Selanjutnya
+					        	</button>
+					        </div>
+				        </fieldset>
+
+				        <fieldset class="uk-fieldset container" id="kritik_dua">
+							<legend class="uk-legend">Laporan Kamu</legend>
+							<div class="uk-margin">
+					            <select class="uk-select">
+					                <option selected>Pilih Organisasi Kemahasiswaan</option>
+					                <option>Badan Eksekutif Mahasiswa</option>
+					                <option>Himpunan Mahasiswa Sistem Informasi</option>
+					                <option>Himpunan Mahasiswa Teknik Informatika</option>
+					                <option>Himpunan Mahasiswa Sistem Komputer</option>
+					                <option>Himpunan Mahasiswa Diploma Komputer</option>
+					            </select>
+					        </div>
+					        <div class="uk-margin">
+					            <textarea class="uk-textarea" rows="5" placeholder="Isi Kritik & Saran kamu"></textarea>
+					        </div>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('kritik_dua', 'kritik_satu')" class="uk-button uk-button-default">
 					        		Sebelumnya
 					        	</button>
 					        	<button type="submit" class="uk-button uk-button-primary uk-float-right">
