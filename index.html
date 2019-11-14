@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aspirasi Online</title>
+	<link rel="stylesheet" href="assets/css/uikit.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+	<div class="uk-grid" uk-grid>
+		<div class="uk-width-expand@s uk-width-1-2@m primary">
+			<nav class="uk-navbar-container uk-navbar-transparent uk-light" uk-navbar>
+			    <div class="uk-navbar-right">
+			        <ul class="uk-navbar-nav">
+			            <li class="uk-active"><a href="#" uk-icon="icon: plus"></a></li>
+			            <li><a href="#" uk-icon="icon: file-edit"></a></li>
+					    <li><a href="#" uk-icon="icon: copy"></a></li>
+					    <li><a href="#" uk-icon="icon: trash"></a></li>
+			        </ul>
+			    </div>
+			</nav>
+
+			<div class="uk-container uk-light uk-text-center uk-margin-top uk-margin-bottom">
+				<img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="">
+				<a class="uk-button uk-button-default uk-margin-top">LAPOR</a>
+
+				<br><br><br><br><br>
+
+				<small>Copyright &copy; Kopi Luak</small>
+			</div>
+		</div>
+
+		<div class="uk-width-expand main">
+			<div class="uk-container uk-margin-large-top" id="sec_1">
+				<div class="uk-grid" uk-grid>
+					<div class="uk-width-1-2">
+					    <div class="uk-card uk-card-default uk-card-body uk-text-center">
+					    	<h3 class="uk-card-title">
+					    		Akademik
+					    	</h3>
+					    	<button onclick="change('sec_1', 'akademik')" class="uk-button uk-button-default">
+					    		Lapor
+					    	</button>
+					    </div>
+					</div>
+					<div class="uk-width-1-2">
+					    <div class="uk-card uk-card-default uk-card-body uk-text-center">
+					    	<h3 class="uk-card-title">
+					    		Akademik
+					    	</h3>
+					    	<button class="uk-button uk-button-default">
+					    		Lapor
+					    	</button>
+					    </div>
+					</div>
+					<div class="uk-width-1-2">
+					    <div class="uk-card uk-card-default uk-card-body uk-text-center">
+					    	<h3 class="uk-card-title">
+					    		Akademik
+					    	</h3>
+					    	<button class="uk-button uk-button-default">
+					    		Lapor
+					    	</button>
+					    </div>
+					</div>
+					<div class="uk-width-1-2">
+					    <div class="uk-card uk-card-default uk-card-body uk-text-center">
+					    	<h3 class="uk-card-title">
+					    		Akademik
+					    	</h3>
+					    	<button class="uk-button uk-button-default">
+					    		Lapor
+					    	</button>
+					    </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-container uk-margin-top container" id="akademik">
+				<button onclick="change('akademik', 'sec_1')" class="uk-button uk-button-primary"><span uk-icon="icon: chevron-double-left"></span> Back</button>
+
+				<span class="uk-float-right uk-margin-small-top">Akademik</span>
+			    <div class="uk-card uk-card-default uk-card-body uk-text-center uk-margin-top uk-margin-bottom">
+			    	<h3 class="uk-card-title">
+			    		Kinerja Dosen
+			    	</h3>
+			    	<button onclick="change('akademik', 'kinerja_dosen')" class="uk-button uk-button-default">
+			    		Lapor
+			    	</button>
+			    </div>
+			    <div class="uk-card uk-card-default uk-card-body uk-text-center">
+			    	<h3 class="uk-card-title">
+			    		Pengajuan Seminar
+			    	</h3>
+			    	<button onclick="change('akademik', 'seminar')" class="uk-button uk-button-default">
+			    		Lapor
+			    	</button>
+			    </div>
+			</div>
+
+			<div class="uk-container uk-margin-top uk-margin-large-bottom container" id="kinerja_dosen">
+				<button onclick="change('kinerja_dosen', 'akademik')" class="uk-button uk-button-primary"><span uk-icon="icon: chevron-double-left"></span> Back</button>
+
+				<span class="uk-float-right uk-margin-small-top">Kinerja Dosen</span>
+
+				<div class="uk-card uk-card-default uk-margin-top">
+					<div class="uk-card-body">
+						<fieldset class="uk-fieldset" id="kinerja_satu">
+							 <legend class="uk-legend">Data Mahasiswa</legend>
+							<div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Nama anda">
+					        </div>
+					        <div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="NIM anda">
+					        </div>
+					        <div class="uk-margin">
+					            <select class="uk-select">
+					                <option selected disabled>Pilih Jurusan Anda</option>
+					                <option>Teknik Informatika</option>
+					                <option>Sistem Informasi</option>
+					                <option>Sistem Komputer</option>
+					            </select>
+					        </div>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('kinerja_satu', 'kinerja_dua')" class="uk-button uk-button-primary uk-float-right">
+					        		Selanjutnya
+					        	</button>
+					        </div>
+				        </fieldset>
+
+				        <fieldset class="uk-fieldset container" id="kinerja_dua">
+							 <legend class="uk-legend">Aspirasi Kamu</legend>
+							<div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Subjek Aspirasi">
+					        </div>
+					        <div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Nama Dosen">
+					        </div>
+					        <div class="uk-margin">
+					            <textarea class="uk-textarea" rows="5" placeholder="Isi Aspirasi"></textarea>
+					        </div>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('kinerja_dua', 'kinerja_satu')" class="uk-button uk-button-default">
+					        		Sebelumnya
+					        	</button>
+					        	<button type="submit" class="uk-button uk-button-primary uk-float-right">
+					        		Kirim Aspirasi
+					        	</button>
+					        </div>
+				        </fieldset>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-container uk-margin-top uk-margin-large-bottom container" id="seminar">
+				<button onclick="change('seminar', 'akademik')" class="uk-button uk-button-primary"><span uk-icon="icon: chevron-double-left"></span> Back</button>
+
+				<span class="uk-float-right uk-margin-small-top">Pengajuan Seminar</span>
+
+				<div class="uk-card uk-card-default uk-margin-top">
+					<div class="uk-card-body">
+						<fieldset class="uk-fieldset" id="seminar_satu">
+							 <legend class="uk-legend">Data Mahasiswa</legend>
+							<div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Nama anda">
+					        </div>
+					        <div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="NIM anda">
+					        </div>
+					        <div class="uk-margin">
+					            <select class="uk-select">
+					                <option selected disabled>Pilih Jurusan Anda</option>
+					                <option>Teknik Informatika</option>
+					                <option>Sistem Informasi</option>
+					                <option>Sistem Komputer</option>
+					            </select>
+					        </div>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('seminar_satu', 'seminar_dua')" class="uk-button uk-button-primary uk-float-right">
+					        		Selanjutnya
+					        	</button>
+					        </div>
+				        </fieldset>
+
+				        <fieldset class="uk-fieldset container" id="seminar_dua">
+							 <legend class="uk-legend">Aspirasi Kamu</legend>
+							<div class="uk-margin">
+					            <input class="uk-input" type="text" placeholder="Subjek Aspirasi">
+					        </div>
+					        <div class="uk-margin">
+					            <textarea class="uk-textarea" rows="5" placeholder="Isi Aspirasi"></textarea>
+					        </div>
+
+					        <div class="uk-margin-top">
+					        	<button onclick="change('seminar_dua', 'seminar_satu')" class="uk-button uk-button-default">
+					        		Sebelumnya
+					        	</button>
+					        	<button type="submit" class="uk-button uk-button-primary uk-float-right">
+					        		Kirim Aspirasi
+					        	</button>
+					        </div>
+				        </fieldset>
+					</div>
+				</div>
+			</div>
+
+			<div class="uk-container uk-margin-top container" id="fasilitas">
+				<button onclick="change('fasilitas', 'sec_1')" class="uk-button uk-button-primary"><span uk-icon="icon: chevron-double-left"></span> Back</button>
+
+				<span class="uk-float-right uk-margin-small-top">Fasilitas</span>
+			    <div class="uk-card uk-card-default uk-card-body uk-text-center uk-margin-top uk-margin-bottom">
+			    	<h3 class="uk-card-title">
+			    		Kerusakan Fasilitas
+			    	</h3>
+			    	<button onclick="change('akademik', 'kinerja_dosen')" class="uk-button uk-button-default">
+			    		Lapor
+			    	</button>
+			    </div>
+			    <div class="uk-card uk-card-default uk-card-body uk-text-center">
+			    	<h3 class="uk-card-title">
+			    		Pengajuan Fasilitas
+			    	</h3>
+			    	<button onclick="change('akademik', 'seminar')" class="uk-button uk-button-default">
+			    		Lapor
+			    	</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/uikit.min.js"></script>
+	<script src="assets/js/uikit-icons.min.js"></script>
+	<script>
+		function change(el, id) {
+			$("#"+el).fadeOut(function() {
+				$('#'+id).fadeIn();
+			});
+		}
+	</script>
+</body>
+</html>
